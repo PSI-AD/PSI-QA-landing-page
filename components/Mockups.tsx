@@ -1,11 +1,11 @@
 
 import React from 'react';
-import { 
-  ShieldCheck, Bug, CheckCircle2, Clock, Zap, 
+import {
+  ShieldCheck, Bug, CheckCircle2, Clock, Zap,
   Terminal, TrendingUp, Users, Cpu, Layout, Activity,
   Scale, ArrowRight, MessageSquare, Paperclip, Check, ShieldAlert,
   Code, Server, Globe, Shield, Target, MousePointer2, Box, Cloud, Rocket, ScanEye,
-  Layers, Timer, UserCheck, Database, LineChart, MapPin, FileCode, Coffee, Package, 
+  Layers, Timer, UserCheck, Database, LineChart, MapPin, FileCode, Coffee, Package,
   Lock, HardDrive, Smartphone, Sparkles, AlertCircle
 } from 'lucide-react';
 
@@ -47,29 +47,29 @@ export const InteractiveFeatureCard = ({ icon: Icon, title, desc, colorClass, is
 
 export const FeatureBentoGrid = () => (
   <div id="features" className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-left">
-    <InteractiveFeatureCard 
-      isLarge 
-      icon={Layers} 
-      title="Multi-Layer Parity Engine" 
+    <InteractiveFeatureCard
+      isLarge
+      icon={Layers}
+      title="Multi-Layer Parity Engine"
       desc="Verify production against staging with deep DOM and API comparison logic that detects even 1px deviations instantly."
       colorClass="bg-[#6161ff] shadow-2xl shadow-[#6161ff]/20"
     />
-    <InteractiveFeatureCard 
-      icon={Zap} 
-      title="Turbo Suites" 
+    <InteractiveFeatureCard
+      icon={Zap}
+      title="Turbo Suites"
       desc="Execute 10k+ tests in under 3 minutes using our proprietary grid network."
       colorClass="bg-gray-800 dark:bg-[#1A1C24] border border-white/5 hover:border-[#6161ff]/50 shadow-xl"
     />
-    <InteractiveFeatureCard 
-      icon={Cpu} 
-      title="AI Triage" 
+    <InteractiveFeatureCard
+      icon={Cpu}
+      title="AI Triage"
       desc="Automatically categorize and route bugs based on historical resolution data."
       colorClass="bg-gray-900 dark:bg-[#0F111A] border border-white/5 shadow-inner"
     />
-    <InteractiveFeatureCard 
-      isLarge 
-      icon={ShieldCheck} 
-      title="Compliance Vault" 
+    <InteractiveFeatureCard
+      isLarge
+      icon={ShieldCheck}
+      title="Compliance Vault"
       desc="Every audit is cryptographically signed and stored for instant SOC2/ISO compliance reporting and regulatory transparency."
       colorClass="bg-[#00c875] shadow-2xl shadow-[#00c875]/20"
     />
@@ -205,25 +205,25 @@ export const StrategyGlassDashboard = () => (
           <div className="w-3.5 h-3.5 rounded-full bg-green-400" />
         </div>
       </div>
-      
+
       <div className="grid grid-cols-2 gap-8 mb-10">
         <div className="bg-gray-50 dark:bg-white/5 rounded-3xl p-7 border border-gray-100 dark:border-white/5 shadow-inner">
-           <div className="flex justify-between items-center mb-5">
-              <span className="text-[10px] font-black text-gray-400 dark:text-white/40 uppercase tracking-widest">Readiness</span>
-              <CheckCircle2 size={16} className="text-[#00c875]" />
-           </div>
-           <div className="text-4xl md:text-5xl font-black mb-3 tracking-tighter">98.4%</div>
-           <div className="h-2 w-full bg-gray-200 dark:bg-white/10 rounded-full overflow-hidden">
-              <div className="h-full bg-[#00c875] w-[98.4%]" />
-           </div>
+          <div className="flex justify-between items-center mb-5">
+            <span className="text-[10px] font-black text-gray-400 dark:text-white/40 uppercase tracking-widest">Readiness</span>
+            <CheckCircle2 size={16} className="text-[#00c875]" />
+          </div>
+          <div className="text-4xl md:text-5xl font-black mb-3 tracking-tighter">98.4%</div>
+          <div className="h-2 w-full bg-gray-200 dark:bg-white/10 rounded-full overflow-hidden">
+            <div className="h-full bg-[#00c875] w-[98.4%]" />
+          </div>
         </div>
         <div className="bg-gray-50 dark:bg-white/5 rounded-3xl p-7 border border-gray-100 dark:border-white/5 shadow-inner">
-           <div className="flex justify-between items-center mb-5">
-              <span className="text-[10px] font-black text-gray-400 dark:text-white/40 uppercase tracking-widest">Parity</span>
-              <ShieldCheck size={16} className="text-[#6161ff]" />
-           </div>
-           <div className="text-4xl md:text-5xl font-black mb-3 tracking-tighter">100%</div>
-           <p className="text-[11px] font-bold text-[#6161ff] uppercase tracking-widest">Verified</p>
+          <div className="flex justify-between items-center mb-5">
+            <span className="text-[10px] font-black text-gray-400 dark:text-white/40 uppercase tracking-widest">Parity</span>
+            <ShieldCheck size={16} className="text-[#6161ff]" />
+          </div>
+          <div className="text-4xl md:text-5xl font-black mb-3 tracking-tighter">100%</div>
+          <p className="text-[11px] font-bold text-[#6161ff] uppercase tracking-widest">Verified</p>
         </div>
       </div>
     </div>
@@ -233,17 +233,17 @@ export const StrategyGlassDashboard = () => (
 export const ROIImpactStrip = () => (
   <div id="impact" className="w-full py-16 md:py-28 bg-white dark:bg-[#1A1C24] border border-gray-200 dark:border-white/5 rounded-[3rem] md:rounded-[4rem] relative shadow-xl overflow-hidden">
     <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center">
-       {[
-         { val: "47", label: "Protected Sites", color: "text-[#6161ff]" },
-         { val: "12,450", label: "Weekly Tests", color: "text-[#00c875]" },
-         { val: "0.01%", label: "Error Rate", color: "text-red-500" },
-         { val: "$1.2M", label: "Saved ROI", color: "text-amber-500" },
-       ].map((stat, i) => (
-         <div key={i} className="break-words">
-            <p className={`text-5xl md:text-7xl font-black mb-4 ${stat.color} tracking-tighter`}>{stat.val}</p>
-            <p className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400 dark:text-white/40">{stat.label}</p>
-         </div>
-       ))}
+      {[
+        { val: "47", label: "Protected Sites", color: "text-[#6161ff]" },
+        { val: "12,450", label: "Weekly Tests", color: "text-[#00c875]" },
+        { val: "0.01%", label: "Error Rate", color: "text-red-500" },
+        { val: "$1.2M", label: "Saved ROI", color: "text-amber-500" },
+      ].map((stat, i) => (
+        <div key={i} className="break-words">
+          <p className={`text-5xl md:text-7xl font-black mb-4 ${stat.color} tracking-tighter`}>{stat.val}</p>
+          <p className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400 dark:text-white/40">{stat.label}</p>
+        </div>
+      ))}
     </div>
   </div>
 );
@@ -304,24 +304,29 @@ export const DeploymentOptimizationVisual = () => (
 );
 
 export const FooterLogoStrip = () => (
-  <div className="w-full py-12 md:py-16 border-b border-gray-100 dark:border-white/5 bg-gray-50 dark:bg-[#0B0C14]">
+  <div className="w-full py-12 md:py-16 border-b border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-[#0B0C14] backdrop-blur-sm">
     <div className="max-w-7xl mx-auto px-8">
-      <p className="text-center text-[10px] uppercase font-black tracking-[0.6em] text-gray-400 dark:text-white/20 mb-10 md:mb-14">Integrations</p>
-      <div className="flex flex-wrap justify-center items-center gap-x-12 md:gap-x-20 gap-y-10">
-        {[
-          { name: "Jira", color: "group-hover:text-[#0052CC]" },
-          { name: "Slack", color: "group-hover:text-[#E01E5A]" },
-          { name: "GitHub", color: "group-hover:text-slate-900 dark:group-hover:text-white" },
-          { name: "GitLab", color: "group-hover:text-[#FC6D26]" },
-          { name: "Jenkins", color: "group-hover:text-[#D33833]" },
-        ].map((brand) => (
-          <div key={brand.name} className="flex items-center gap-4 group cursor-pointer transition-all duration-500">
-            <span className={`font-black text-xl md:text-2xl tracking-tighter text-gray-400 dark:text-gray-300 ${brand.color} transition-colors`}>{brand.name}</span>
-          </div>
-        ))}
-      </div>
+      {[
+        { name: "Jira", color: "hover:text-[#0052CC]" },
+        { name: "Slack", color: "hover:text-[#E01E5A]" },
+        { name: "GitHub", color: "hover:text-black dark:hover:text-white" },
+        { name: "GitLab", color: "hover:text-[#FC6D26]" },
+        { name: "Jenkins", color: "hover:text-[#D33833]" },
+        { name: "Docker", color: "hover:text-[#2496ED]" },
+        { name: "Kubernetes", color: "hover:text-[#326CE5]" },
+        { name: "Selenium", color: "hover:text-[#43B02A]" },
+        { name: "Cypress", color: "hover:text-[#17202C] dark:hover:text-white" },
+        { name: "Postman", color: "hover:text-[#FF6C37]" },
+        { name: "AWS", color: "hover:text-[#FF9900]" },
+        { name: "Azure", color: "hover:text-[#0078D4]" },
+      ].map((brand) => (
+        <div key={brand.name} className={`font-black text-xl md:text-2xl tracking-tighter text-gray-300 dark:text-gray-600 cursor-pointer transition-colors duration-300 ${brand.color}`}>
+          {brand.name}
+        </div>
+      ))}
     </div>
   </div>
+  </div >
 );
 
 export const DetailedTicketTable = () => (
@@ -380,15 +385,15 @@ export const FloatingKanban3D = () => (
           </div>
           {[1, 2].map((card) => (
             <div key={card} className="bg-white dark:bg-[#1A1C24] p-5 rounded-2xl border border-gray-100 dark:border-white/5 shadow-md hover:-translate-y-1 transition-transform cursor-pointer group">
-               <div className="h-1 w-8 rounded-full bg-gray-100 dark:bg-white/10 mb-3 group-hover:bg-[#6161ff] transition-colors" />
-               <p className="text-xs font-bold text-gray-700 dark:text-white/80 tracking-tight leading-snug">Sprint Protocol Verification #{1040 + idx * 5 + card}</p>
-               <div className="flex justify-between items-center mt-4">
-                  <div className="flex -space-x-1">
-                    <div className="w-5 h-5 rounded-full bg-indigo-500 border border-white dark:border-[#1A1C24]" />
-                    <div className="w-5 h-5 rounded-full bg-teal-500 border border-white dark:border-[#1A1C24]" />
-                  </div>
-                  <Clock size={12} className="text-gray-300 dark:text-white/10" />
-               </div>
+              <div className="h-1 w-8 rounded-full bg-gray-100 dark:bg-white/10 mb-3 group-hover:bg-[#6161ff] transition-colors" />
+              <p className="text-xs font-bold text-gray-700 dark:text-white/80 tracking-tight leading-snug">Sprint Protocol Verification #{1040 + idx * 5 + card}</p>
+              <div className="flex justify-between items-center mt-4">
+                <div className="flex -space-x-1">
+                  <div className="w-5 h-5 rounded-full bg-indigo-500 border border-white dark:border-[#1A1C24]" />
+                  <div className="w-5 h-5 rounded-full bg-teal-500 border border-white dark:border-[#1A1C24]" />
+                </div>
+                <Clock size={12} className="text-gray-300 dark:text-white/10" />
+              </div>
             </div>
           ))}
           <div className="p-4 border-2 border-dashed border-gray-100 dark:border-white/5 rounded-2xl flex items-center justify-center text-gray-200 dark:text-white/10">
@@ -417,7 +422,7 @@ export const FullToolchainGrid = () => (
       { name: 'Datadog', color: 'text-[#632CA6]' }
     ].map((tool, i) => (
       <div key={i} className="bg-white dark:bg-[#1A1C24] border border-gray-200 dark:border-white/5 p-8 rounded-3xl flex flex-col items-center gap-4 hover:shadow-xl transition-all group cursor-pointer">
-        <span className={`text-[10px] font-black uppercase tracking-widest text-gray-400 dark:text-white/30 group-hover:${tool.color} transition-colors`}>{tool.name}</span>
+        <span className={`text-[12px] font-black uppercase tracking-widest ${tool.color} transition-colors`}>{tool.name}</span>
       </div>
     ))}
   </div>
