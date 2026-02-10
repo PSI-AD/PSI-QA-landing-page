@@ -306,27 +306,29 @@ export const DeploymentOptimizationVisual = () => (
 export const FooterLogoStrip = () => (
   <div className="w-full py-12 md:py-16 border-b border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-[#0B0C14] backdrop-blur-sm">
     <div className="max-w-7xl mx-auto px-8">
-      {[
-        { name: "Jira", color: "hover:text-[#0052CC]" },
-        { name: "Slack", color: "hover:text-[#E01E5A]" },
-        { name: "GitHub", color: "hover:text-black dark:hover:text-white" },
-        { name: "GitLab", color: "hover:text-[#FC6D26]" },
-        { name: "Jenkins", color: "hover:text-[#D33833]" },
-        { name: "Docker", color: "hover:text-[#2496ED]" },
-        { name: "Kubernetes", color: "hover:text-[#326CE5]" },
-        { name: "Selenium", color: "hover:text-[#43B02A]" },
-        { name: "Cypress", color: "hover:text-[#17202C] dark:hover:text-white" },
-        { name: "Postman", color: "hover:text-[#FF6C37]" },
-        { name: "AWS", color: "hover:text-[#FF9900]" },
-        { name: "Azure", color: "hover:text-[#0078D4]" },
-      ].map((brand) => (
-        <div key={brand.name} className={`font-black text-xl md:text-2xl tracking-tighter text-gray-300 dark:text-gray-600 cursor-pointer transition-colors duration-300 ${brand.color}`}>
-          {brand.name}
-        </div>
-      ))}
+      <p className="text-center text-[10px] uppercase font-black tracking-[0.6em] text-gray-400 dark:text-white/20 mb-10 md:mb-14">Seamlessly Integrated With</p>
+      <div className="grid grid-cols-2 md:grid-cols-6 gap-8 md:gap-12 items-center justify-items-center opacity-70 hover:opacity-100 transition-opacity duration-500">
+        {[
+          { name: "Jira", color: "hover:text-[#0052CC]" },
+          { name: "Slack", color: "hover:text-[#E01E5A]" },
+          { name: "GitHub", color: "hover:text-black dark:hover:text-white" },
+          { name: "GitLab", color: "hover:text-[#FC6D26]" },
+          { name: "Jenkins", color: "hover:text-[#D33833]" },
+          { name: "Docker", color: "hover:text-[#2496ED]" },
+          { name: "Kubernetes", color: "hover:text-[#326CE5]" },
+          { name: "Selenium", color: "hover:text-[#43B02A]" },
+          { name: "Cypress", color: "hover:text-[#17202C] dark:hover:text-white" },
+          { name: "Postman", color: "hover:text-[#FF6C37]" },
+          { name: "AWS", color: "hover:text-[#FF9900]" },
+          { name: "Azure", color: "hover:text-[#0078D4]" },
+        ].map((brand) => (
+          <div key={brand.name} className={`font-black text-xl md:text-2xl tracking-tighter text-gray-300 dark:text-gray-600 cursor-pointer transition-colors duration-300 ${brand.color}`}>
+            {brand.name}
+          </div>
+        ))}
+      </div>
     </div>
   </div>
-  </div >
 );
 
 export const DetailedTicketTable = () => (
