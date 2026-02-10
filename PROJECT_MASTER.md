@@ -6,7 +6,6 @@
 **Core Value Proposition:**
 * **Speed:** 14m Cycle Duration (-82% vs manual).
 * **Precision:** 100% Visual & Logic Parity.
-* **Effort:** Zero Human Touch (Auto-Verified).
 
 ## 2. Technical Stack
 * **Framework:** React 18 (Vite)

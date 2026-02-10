@@ -230,39 +230,26 @@ export const StrategyGlassDashboard = () => (
   </div>
 );
 
-export const ROIImpactStrip = () => (
-  <div id="impact" className="w-full py-16 md:py-28 bg-white dark:bg-[#1A1C24] border border-gray-200 dark:border-white/5 rounded-[3rem] md:rounded-[4rem] relative shadow-xl overflow-hidden">
-    <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center">
-      {[
-        { val: "47", label: "Protected Sites", color: "text-[#6161ff]" },
-        { val: "12,450", label: "Weekly Tests", color: "text-[#00c875]" },
-        { val: "0.01%", label: "Error Rate", color: "text-red-500" },
-        { val: "$1.2M", label: "Saved ROI", color: "text-amber-500" },
-      ].map((stat, i) => (
-        <div key={i} className="break-words">
-          <p className={`text-5xl md:text-7xl font-black mb-4 ${stat.color} tracking-tighter`}>{stat.val}</p>
-          <p className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-400 dark:text-white/40">{stat.label}</p>
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
 export const CodePipelineVisual = () => (
   <div className="relative w-full py-16 md:py-20 px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-12">
     <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#6161ff]/20 to-transparent -translate-y-1/2 hidden md:block" />
+    <div className="absolute top-1/2 left-0 w-full flex justify-between px-20 -translate-y-1/2 hidden md:flex pointer-events-none">
+      <div className="w-2 h-2 rounded-full bg-[#6161ff] animate-ping" />
+      <div className="w-2 h-2 rounded-full bg-[#6161ff] animate-ping delay-100" />
+      <div className="w-2 h-2 rounded-full bg-[#6161ff] animate-ping delay-200" />
+    </div>
     {[
-      { name: "React", icon: <Box className="text-cyan-500" />, desc: "Modular UI", color: "from-cyan-500/10" },
-      { name: "TypeScript", icon: <FileCode className="text-blue-500" />, desc: "Type-Strict", color: "from-blue-500/10" },
-      { name: "Java", icon: <Coffee className="text-red-500" />, desc: "Scale Backend", color: "from-red-500/10" }
+      { name: "React", icon: <Box className="w-10 h-10 text-cyan-400" />, desc: "Component Isolation", color: "from-cyan-500/20" },
+      { name: "TypeScript", icon: <FileCode className="w-10 h-10 text-blue-500" />, desc: "Type-Safe Contracts", color: "from-blue-500/20" },
+      { name: "Java", icon: <Coffee className="w-10 h-10 text-red-500" />, desc: "Backend Stability", color: "from-red-500/20" }
     ].map((node, i) => (
-      <div key={i} className="relative z-10 flex flex-col items-center group">
-        <div className={`w-24 h-24 rounded-full bg-gradient-to-br ${node.color} to-transparent border-2 border-gray-100 dark:border-white/5 flex items-center justify-center shadow-2xl backdrop-blur-md group-hover:scale-110 transition-transform cursor-pointer relative`}>
+      <div key={i} className="relative z-10 flex flex-col items-center group bg-white dark:bg-[#1A1C24] p-6 rounded-3xl border border-gray-100 dark:border-white/5 shadow-xl">
+        <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${node.color} to-transparent border border-white/10 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform cursor-pointer relative mb-6`}>
           {node.icon}
         </div>
-        <div className="mt-6 text-center">
-          <h5 className="text-xl font-black text-gray-900 dark:text-white">{node.name}</h5>
-          <p className="text-[10px] font-black text-gray-400 mt-2 uppercase tracking-widest">{node.desc}</p>
+        <div className="text-center">
+          <h5 className="text-xl font-black text-gray-900 dark:text-white mb-1">{node.name}</h5>
+          <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{node.desc}</p>
         </div>
       </div>
     ))}
@@ -307,26 +294,46 @@ export const FooterLogoStrip = () => (
   <div className="w-full py-12 md:py-16 border-b border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-[#0B0C14] backdrop-blur-sm">
     <div className="max-w-7xl mx-auto px-8">
       <p className="text-center text-[10px] uppercase font-black tracking-[0.6em] text-gray-400 dark:text-white/20 mb-10 md:mb-14">Seamlessly Integrated With</p>
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-8 md:gap-12 items-center justify-items-center opacity-70 hover:opacity-100 transition-opacity duration-500">
+      <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 hover:opacity-100 transition-opacity duration-500">
         {[
-          { name: "Jira", color: "hover:text-[#0052CC]" },
-          { name: "Slack", color: "hover:text-[#E01E5A]" },
-          { name: "GitHub", color: "hover:text-black dark:hover:text-white" },
-          { name: "GitLab", color: "hover:text-[#FC6D26]" },
-          { name: "Jenkins", color: "hover:text-[#D33833]" },
-          { name: "Docker", color: "hover:text-[#2496ED]" },
-          { name: "Kubernetes", color: "hover:text-[#326CE5]" },
-          { name: "Selenium", color: "hover:text-[#43B02A]" },
-          { name: "Cypress", color: "hover:text-[#17202C] dark:hover:text-white" },
-          { name: "Postman", color: "hover:text-[#FF6C37]" },
-          { name: "AWS", color: "hover:text-[#FF9900]" },
-          { name: "Azure", color: "hover:text-[#0078D4]" },
+          { name: "Jira", icon: Layout, color: "text-[#0052CC]" },
+          { name: "Slack", icon: MessageSquare, color: "text-[#E01E5A]" },
+          { name: "GitHub", icon: FileCode, color: "text-black dark:text-white" },
+          { name: "GitLab", icon: FileCode, color: "text-[#FC6D26]" },
+          { name: "Jenkins", icon: Server, color: "text-[#D33833]" },
+          { name: "Docker", icon: Box, color: "text-[#2496ED]" },
+          { name: "AWS", icon: Cloud, color: "text-[#FF9900]" },
+          { name: "Selenium", icon: Zap, color: "text-[#43B02A]" },
         ].map((brand) => (
-          <div key={brand.name} className={`font-black text-xl md:text-2xl tracking-tighter text-gray-300 dark:text-gray-600 cursor-pointer transition-colors duration-300 ${brand.color}`}>
-            {brand.name}
+          <div key={brand.name} className="flex items-center gap-3 group cursor-pointer">
+            <brand.icon className={`w-6 h-6 ${brand.color} saturate-0 group-hover:saturate-100 transition-all duration-300`} />
+            <span className={`font-black text-xl tracking-tighter text-gray-300 dark:text-gray-600 group-hover:text-gray-900 dark:group-hover:text-white transition-colors duration-300`}>{brand.name}</span>
           </div>
         ))}
       </div>
+    </div>
+  </div>
+);
+
+export const ROIImpactStrip = () => (
+  <div id="impact" className="w-full py-16 md:py-28 bg-white dark:bg-[#1A1C24] border border-gray-200 dark:border-white/5 rounded-[3rem] md:rounded-[4rem] relative shadow-xl overflow-hidden text-center">
+    <div className="mb-16">
+      <h3 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tighter mb-4">Proven Impact at Scale</h3>
+      <p className="text-slate-500 dark:text-gray-400 text-lg font-medium italic">Real-world performance metrics from our global audit network.</p>
+    </div>
+    <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
+      {[
+        { val: "47", label: "Protected Sites", sub: "Enterprise Domains", color: "text-[#6161ff]" },
+        { val: "12,450", label: "Weekly Tests", sub: "Automated Executions", color: "text-[#00c875]" },
+        { val: "0.01%", label: "Error Rate", sub: "Production Leaks", color: "text-red-500" },
+        { val: "$1.2M", label: "Saved ROI", sub: "Eng. Cost Annualized", color: "text-amber-500" },
+      ].map((stat, i) => (
+        <div key={i} className="break-words">
+          <p className={`text-5xl md:text-7xl font-black mb-2 ${stat.color} tracking-tighter`}>{stat.val}</p>
+          <p className="text-[12px] font-black uppercase tracking-[0.2em] text-slate-900 dark:text-white mb-1">{stat.label}</p>
+          <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{stat.sub}</p>
+        </div>
+      ))}
     </div>
   </div>
 );
@@ -376,20 +383,44 @@ export const FloatingKanban3D = () => (
   <div className="relative w-full max-w-4xl mx-auto py-10 perspective-1000 hidden md:block">
     <div className="grid grid-cols-3 gap-8 transform rotate-x-[6deg] -rotate-y-[12deg]">
       {[
-        { title: 'To Do', color: 'bg-[#6161ff]' },
-        { title: 'In Review', color: 'bg-amber-400' },
-        { title: 'Verified', color: 'bg-[#00c875]' }
-      ].map((col, idx) => (
-        <div key={col.title} className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-[2rem] shadow-2xl flex flex-col gap-5">
+        {
+          title: 'To Do',
+          color: 'bg-[#6161ff]',
+          cards: [
+            { id: 101, text: "API Latency Check", tag: "High Priority", tagColor: "bg-red-500/10 text-red-500" },
+            { id: 102, text: "UI Parity Audit", tag: "Visual", tagColor: "bg-purple-500/10 text-purple-500" }
+          ]
+        },
+        {
+          title: 'In Review',
+          color: 'bg-amber-400',
+          cards: [
+            { id: 103, text: "Database Integrity", tag: "Backend", tagColor: "bg-blue-500/10 text-blue-500" },
+            { id: 104, text: "Auth Token Expiry", tag: "Security", tagColor: "bg-amber-500/10 text-amber-500" }
+          ]
+        },
+        {
+          title: 'Verified',
+          color: 'bg-[#00c875]',
+          cards: [
+            { id: 105, text: "Payment Gateway Regression", tag: "Critical", tagColor: "bg-emerald-500/10 text-emerald-500" },
+            { id: 106, text: "Load Balancer Stress Test", tag: "DevOps", tagColor: "bg-cyan-500/10 text-cyan-500" }
+          ]
+        }
+      ].map((col) => (
+        <div key={col.title} className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-[2rem] shadow-2xl flex flex-col gap-8">
           <div className="flex justify-between items-center mb-2">
             <h5 className="text-[10px] font-black uppercase tracking-widest text-gray-400 dark:text-white/40">{col.title}</h5>
             <div className={`w-2 h-2 rounded-full ${col.color}`} />
           </div>
-          {[1, 2].map((card) => (
-            <div key={card} className="bg-white dark:bg-[#1A1C24] p-5 rounded-2xl border border-gray-100 dark:border-white/5 shadow-md hover:-translate-y-1 transition-transform cursor-pointer group">
-              <div className="h-1 w-8 rounded-full bg-gray-100 dark:bg-white/10 mb-3 group-hover:bg-[#6161ff] transition-colors" />
-              <p className="text-xs font-bold text-gray-700 dark:text-white/80 tracking-tight leading-snug">Sprint Protocol Verification #{1040 + idx * 5 + card}</p>
-              <div className="flex justify-between items-center mt-4">
+          {col.cards.map((card) => (
+            <div key={card.id} className="bg-white dark:bg-[#1A1C24] p-5 rounded-2xl border border-gray-100 dark:border-white/5 shadow-md hover:-translate-y-1 transition-transform cursor-pointer group">
+              <div className="flex justify-between items-start mb-3">
+                <span className={`px-2 py-1 rounded text-[8px] font-black uppercase tracking-wider ${card.tagColor}`}>{card.tag}</span>
+                <div className="h-1.5 w-1.5 rounded-full bg-gray-200 dark:bg-white/10 group-hover:bg-[#6161ff] transition-colors" />
+              </div>
+              <p className="text-xs font-bold text-gray-700 dark:text-white/90 tracking-tight leading-snug">{card.text}</p>
+              <div className="flex justify-between items-center mt-4 pt-4 border-t border-gray-50 dark:border-white/5">
                 <div className="flex -space-x-1">
                   <div className="w-5 h-5 rounded-full bg-indigo-500 border border-white dark:border-[#1A1C24]" />
                   <div className="w-5 h-5 rounded-full bg-teal-500 border border-white dark:border-[#1A1C24]" />
@@ -398,7 +429,7 @@ export const FloatingKanban3D = () => (
               </div>
             </div>
           ))}
-          <div className="p-4 border-2 border-dashed border-gray-100 dark:border-white/5 rounded-2xl flex items-center justify-center text-gray-200 dark:text-white/10">
+          <div className="p-4 border-2 border-dashed border-gray-100 dark:border-white/5 rounded-2xl flex items-center justify-center text-gray-200 dark:text-white/10 mt-auto">
             <Layout size={16} />
           </div>
         </div>
@@ -410,21 +441,22 @@ export const FloatingKanban3D = () => (
 export const FullToolchainGrid = () => (
   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
     {[
-      { name: 'Jira', color: 'text-[#0052CC]' },
-      { name: 'GitHub', color: 'text-slate-900 dark:text-white' },
-      { name: 'Jenkins', color: 'text-[#D33833]' },
-      { name: 'Slack', color: 'text-[#E01E5A]' },
-      { name: 'Docker', color: 'text-[#2496ED]' },
-      { name: 'AWS', color: 'text-[#FF9900]' },
-      { name: 'Azure', color: 'text-[#0078D4]' },
-      { name: 'Selenium', color: 'text-[#43B02A]' },
-      { name: 'Cypress', color: 'text-slate-900 dark:text-white' },
-      { name: 'Postman', color: 'text-[#FF6C37]' },
-      { name: 'Sentry', color: 'text-[#FB4226]' },
-      { name: 'Datadog', color: 'text-[#632CA6]' }
+      { name: 'Jira', icon: Layout, color: 'text-[#0052CC]' },
+      { name: 'GitHub', icon: FileCode, color: 'text-slate-900 dark:text-white' },
+      { name: 'Jenkins', icon: Server, color: 'text-[#D33833]' },
+      { name: 'Slack', icon: MessageSquare, color: 'text-[#E01E5A]' },
+      { name: 'Docker', icon: Box, color: 'text-[#2496ED]' },
+      { name: 'AWS', icon: Cloud, color: 'text-[#FF9900]' },
+      { name: 'Azure', icon: Cloud, color: 'text-[#0078D4]' },
+      { name: 'Selenium', icon: Zap, color: 'text-[#43B02A]' },
+      { name: 'Cypress', icon: Terminal, color: 'text-slate-900 dark:text-white' },
+      { name: 'Postman', icon: Rocket, color: 'text-[#FF6C37]' },
+      { name: 'Sentry', icon: ShieldAlert, color: 'text-[#FB4226]' },
+      { name: 'Datadog', icon: Activity, color: 'text-[#632CA6]' }
     ].map((tool, i) => (
-      <div key={i} className="bg-white dark:bg-[#1A1C24] border border-gray-200 dark:border-white/5 p-8 rounded-3xl flex flex-col items-center gap-4 hover:shadow-xl transition-all group cursor-pointer">
-        <span className={`text-[12px] font-black uppercase tracking-widest ${tool.color} transition-colors`}>{tool.name}</span>
+      <div key={i} className="bg-white dark:bg-[#1A1C24] border border-gray-200 dark:border-white/5 p-8 rounded-[2rem] flex flex-col items-center gap-6 hover:shadow-2xl transition-all group cursor-pointer hover:-translate-y-2">
+        <tool.icon className={`w-12 h-12 ${tool.color} drop-shadow-lg`} />
+        <span className="text-[11px] font-black uppercase tracking-widest text-slate-900 dark:text-white">{tool.name}</span>
       </div>
     ))}
   </div>

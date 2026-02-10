@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import ProjectsTasksView from './components/ProjectsTasksView';
 import ProductDevView from './components/ProductDevView';
-import { BarChart3, PlayCircle, Moon, Sun, X } from 'lucide-react';
+import { BarChart3, PlayCircle, Moon, Sun, X, ArrowUp } from 'lucide-react';
 import { FooterLogoStrip } from './components/Mockups';
 
 const DASHBOARD_URL = "https://psi-qa.web.app/dashboard";
@@ -11,6 +11,16 @@ const App: React.FC = () => {
   const [activeView, setActiveView] = useState<'projects' | 'product'>('projects');
   const [darkMode, setDarkMode] = useState(true);
   const [activeModal, setActiveModal] = useState<string | null>(null);
+
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 300);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -49,12 +59,12 @@ const App: React.FC = () => {
         }`}>
 
         {/* Header - Stacking Layout for Mobile */}
-        <header className={`sticky top-0 z-[100] w-full border-b transition-all duration-500 backdrop-blur-3xl ${darkMode ? 'bg-[#0F111A]/90 border-white/5 shadow-2xl shadow-black/40' : 'bg-white/90 border-gray-200 shadow-sm'
+        <header className={`sticky top-0 z-[100] w-full border-b transition-all duration-500 backdrop-blur-3xl ${darkMode ? 'bg-[#0F111A]/80 border-white/5 shadow-2xl shadow-black/40' : 'bg-white/80 border-gray-200 shadow-sm'
           }`}>
           <div className="absolute inset-0 z-0 bg-grid-pattern opacity-[0.05] pointer-events-none" />
           <div className={`h-1.5 w-full transition-colors duration-500 relative z-10 ${activeView === 'projects' ? 'bg-[#6161ff]' : 'bg-[#00c875]'}`} />
 
-          <div className="max-w-7xl mx-auto px-6 py-4 md:h-24 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
+          <div className="max-w-7xl mx-auto px-6 md:px-8 py-4 md:h-24 flex flex-col md:flex-row justify-between items-center gap-6 relative z-10">
             {/* Logo */}
             <div className="flex items-center gap-4 group cursor-pointer" onClick={() => { setActiveView('projects'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
               <div className={`w-12 h-12 rounded-2xl flex items-center justify-center font-black italic shadow-2xl transition-all duration-500 transform group-hover:rotate-6 ${activeView === 'projects' ? 'bg-[#6161ff] text-white shadow-[#6161ff]/40' : 'bg-[#00c875] text-[#0F111A] shadow-[#00c875]/40'
@@ -79,7 +89,7 @@ const App: React.FC = () => {
                   }`}
               >
                 <BarChart3 size={14} />
-                Strategy
+                <span className="hidden md:inline">Strategy</span>
               </button>
               <button
                 onClick={() => setActiveView('product')}
@@ -89,7 +99,7 @@ const App: React.FC = () => {
                   }`}
               >
                 <PlayCircle size={14} />
-                Execution
+                <span className="hidden md:inline">Execution</span>
               </button>
             </div>
 
@@ -103,10 +113,11 @@ const App: React.FC = () => {
               </button>
               <div className="w-px h-8 bg-gray-200 dark:bg-white/10" />
               <a href={DASHBOARD_URL} className={`px-6 py-3 rounded-2xl font-black text-[10px] uppercase tracking-widest transition-all shadow-xl hover:brightness-110 active:scale-95 flex items-center justify-center ${activeView === 'projects'
-                ? 'bg-gray-900 text-white dark:bg-white dark:text-[#0F111A]'
+                ? 'bg-blue-600 hover:bg-blue-700 text-white'
                 : 'bg-[#00c875] text-[#0F111A]'
                 }`}>
-                Login
+                <span className="hidden md:inline">Login</span>
+                <span className="md:hidden">Log</span>
               </a>
             </div>
           </div>
@@ -186,6 +197,14 @@ const App: React.FC = () => {
         {activeModal && (
           <Modal title={activeModal} content={getModalContent(activeModal)} onClose={() => setActiveModal(null)} />
         )}
+
+        {/* Back To Top */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className={`fixed bottom-8 right-8 p-4 bg-blue-600 text-white rounded-full shadow-2xl transition-all duration-500 z-50 hover:bg-blue-700 hover:scale-110 ${showBackToTop ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
+        >
+          <ArrowUp size={24} />
+        </button>
       </div>
     </div>
   );
