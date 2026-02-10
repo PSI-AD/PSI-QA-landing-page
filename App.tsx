@@ -9,7 +9,7 @@ const DASHBOARD_URL = "https://psi-qa.web.app/dashboard";
 
 const App: React.FC = () => {
   const [activeView, setActiveView] = useState<'projects' | 'product'>('projects');
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [activeModal, setActiveModal] = useState<string | null>(null);
 
   useEffect(() => {
@@ -74,8 +74,8 @@ const App: React.FC = () => {
               <button
                 onClick={() => setActiveView('projects')}
                 className={`flex-1 md:flex-none flex items-center justify-center gap-3 px-6 md:px-8 py-3 rounded-2xl transition-all duration-300 font-black text-[10px] md:text-xs uppercase tracking-widest whitespace-nowrap ${activeView === 'projects'
-                    ? (darkMode ? 'bg-white/10 text-white shadow-xl border border-white/10' : 'bg-white text-[#6161ff] shadow-xl border border-transparent')
-                    : 'text-gray-400 hover:text-[#6161ff]'
+                  ? (darkMode ? 'bg-white/10 text-white shadow-xl border border-white/10' : 'bg-white text-[#6161ff] shadow-xl border border-transparent')
+                  : 'text-gray-400 hover:text-[#6161ff]'
                   }`}
               >
                 <BarChart3 size={14} />
@@ -84,8 +84,8 @@ const App: React.FC = () => {
               <button
                 onClick={() => setActiveView('product')}
                 className={`flex-1 md:flex-none flex items-center justify-center gap-3 px-6 md:px-8 py-3 rounded-2xl transition-all duration-300 font-black text-[10px] md:text-xs uppercase tracking-widest whitespace-nowrap ${activeView === 'product'
-                    ? (darkMode ? 'bg-white/10 text-white shadow-xl border border-white/10' : 'bg-white text-[#00c875] shadow-xl border border-transparent')
-                    : 'text-gray-400 hover:text-[#00c875]'
+                  ? (darkMode ? 'bg-white/10 text-white shadow-xl border border-white/10' : 'bg-white text-[#00c875] shadow-xl border border-transparent')
+                  : 'text-gray-400 hover:text-[#00c875]'
                   }`}
               >
                 <PlayCircle size={14} />
@@ -103,8 +103,8 @@ const App: React.FC = () => {
               </button>
               <div className="w-px h-8 bg-gray-200 dark:bg-white/10" />
               <a href={DASHBOARD_URL} className={`px-6 py-3 rounded-2xl font-black text-[10px] uppercase tracking-widest transition-all shadow-xl hover:brightness-110 active:scale-95 flex items-center justify-center ${activeView === 'projects'
-                  ? 'bg-gray-900 text-white dark:bg-white dark:text-[#0F111A]'
-                  : 'bg-[#00c875] text-[#0F111A]'
+                ? 'bg-gray-900 text-white dark:bg-white dark:text-[#0F111A]'
+                : 'bg-[#00c875] text-[#0F111A]'
                 }`}>
                 Login
               </a>
