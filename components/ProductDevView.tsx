@@ -20,11 +20,11 @@ const ProductDevView: React.FC = () => {
               <div className="inline-flex items-center gap-2.5 bg-[#00c875]/10 border border-[#00c875]/20 px-5 py-2 rounded-full text-[#00c875] text-[10px] md:text-[11px] font-black uppercase tracking-[0.2em] mb-10 md:mb-12">
                 <TrendingUp size={14} /> TEAM VELOCITY AT 124%
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black mb-8 md:mb-10 tracking-tighter leading-[0.85] text-slate-900 dark:text-white">
+              <h2 className="text-4xl md:text-6xl lg:text-8xl font-black mb-8 md:mb-10 tracking-tighter leading-[0.85] text-slate-900 dark:text-white">
                 Empower your <br />
                 <span className="text-[#00c875]">Engineers.</span>
-              </h1>
-              <p className="text-lg md:text-2xl text-slate-500 dark:text-gray-400 mb-10 md:mb-14 max-w-xl font-medium leading-relaxed italic">
+              </h2>
+              <p className="text-lg md:text-2xl text-slate-500 dark:text-gray-600 mb-10 md:mb-14 max-w-xl font-medium leading-relaxed italic">
                 Seamlessly connect QA audit cycles directly to engineering pipelines with deep native integrations for your entire stack.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8">
@@ -52,7 +52,7 @@ const ProductDevView: React.FC = () => {
           <div className="text-left">
             <ScrollReveal>
               <h2 className="text-3xl md:text-6xl font-black tracking-tighter mb-8 leading-none text-slate-900 dark:text-white">Accelerate Release Velocity.</h2>
-              <p className="text-slate-500 dark:text-gray-400 font-medium text-lg md:text-xl mb-12 leading-relaxed italic">
+              <p className="text-slate-500 dark:text-gray-600 font-medium text-lg md:text-xl mb-12 leading-relaxed italic">
                 Replace manual regression bottlenecks with high-precision AI parity auditing and hyper-parallel execution workflows.
               </p>
 
@@ -62,8 +62,8 @@ const ProductDevView: React.FC = () => {
                     <Zap size={28} />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-black mb-2 tracking-tight text-slate-900 dark:text-white">Automated Regression Suites</h4>
-                    <p className="text-slate-500 dark:text-gray-400 font-medium leading-relaxed">Execute thousands of complex test cases simultaneously, slashing cycles from days to under 15 minutes.</p>
+                    <h3 className="text-2xl font-black mb-2 tracking-tight text-slate-900 dark:text-white">Automated Regression Suites</h3>
+                    <p className="text-slate-500 dark:text-gray-600 font-medium leading-relaxed">Execute thousands of complex test cases simultaneously, slashing cycles from days to under 15 minutes.</p>
                   </div>
                 </div>
 
@@ -72,8 +72,8 @@ const ProductDevView: React.FC = () => {
                     <ScanEye size={28} />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-black mb-2 tracking-tight text-slate-900 dark:text-white">Instant Parity Detection</h4>
-                    <p className="text-slate-500 dark:text-gray-400 font-medium leading-relaxed">Deep visual and functional comparison logic immediately flags deviations against established baselines.</p>
+                    <h3 className="text-2xl font-black mb-2 tracking-tight text-slate-900 dark:text-white">Instant Parity Detection</h3>
+                    <p className="text-slate-500 dark:text-gray-600 font-medium leading-relaxed">Deep visual and functional comparison logic immediately flags deviations against established baselines.</p>
                   </div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ const ProductDevView: React.FC = () => {
           <ScrollReveal>
             <div className="mb-20 md:mb-28">
               <h2 className="text-3xl md:text-6xl font-black tracking-tighter mb-8 text-slate-900 dark:text-white">The Full Toolchain.</h2>
-              <p className="text-slate-500 dark:text-gray-400 text-lg md:text-xl font-medium max-w-3xl mx-auto italic">A seamless unified integration layer connecting every tool in your dev stack.</p>
+              <p className="text-slate-500 dark:text-gray-600 text-lg md:text-xl font-medium max-w-3xl mx-auto italic">A seamless unified integration layer connecting every tool in your dev stack.</p>
             </div>
             <FullToolchainGrid />
           </ScrollReveal>
@@ -116,8 +116,8 @@ const ProductDevView: React.FC = () => {
                     <HeartPulse size={32} />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-black mb-3 text-slate-900 dark:text-white">Burnout Risk Alerts</h4>
-                    <p className="text-slate-500 dark:text-gray-400 text-lg leading-relaxed font-medium">Identify team fatigue by monitoring sustained high-priority ticket distribution across sprints.</p>
+                    <h3 className="text-2xl font-black mb-3 text-slate-900 dark:text-white">Burnout Risk Alerts</h3>
+                    <p className="text-slate-500 dark:text-gray-600 text-lg leading-relaxed font-medium">Identify team fatigue by monitoring sustained high-priority ticket distribution across sprints.</p>
                   </div>
                 </div>
                 <div className="flex gap-8">
@@ -125,8 +125,8 @@ const ProductDevView: React.FC = () => {
                     <BarChart3 size={32} />
                   </div>
                   <div>
-                    <h4 className="text-2xl font-black mb-3 text-slate-900 dark:text-white">Cycle Efficiency</h4>
-                    <p className="text-slate-500 dark:text-gray-400 text-lg font-medium leading-relaxed">Real-time tracking of ticket duration from initial claim through release.</p>
+                    <h3 className="text-2xl font-black mb-3 text-slate-900 dark:text-white">Cycle Efficiency</h3>
+                    <p className="text-slate-500 dark:text-gray-600 text-lg font-medium leading-relaxed">Real-time tracking of ticket duration from initial claim through release.</p>
                   </div>
                 </div>
               </div>
@@ -154,7 +154,7 @@ const ProductDevView: React.FC = () => {
         <div className="max-w-5xl mx-auto text-center bg-slate-900 dark:bg-[#1A1C24] rounded-[3rem] md:rounded-[5rem] p-16 md:p-32 shadow-2xl relative overflow-hidden border border-white/5">
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#00c875]/10 rounded-full blur-[150px] -mb-48 -mr-48" />
           <h2 className="text-4xl md:text-7xl font-black text-white mb-8 md:mb-12 tracking-tighter">Ready to Scale?</h2>
-          <p className="text-gray-400 text-lg md:text-2xl mb-12 md:mb-16 max-w-3xl mx-auto italic leading-relaxed">Join the PSI QA global community and eliminate testing bottlenecks forever.</p>
+          <p className="text-gray-600 text-lg md:text-2xl mb-12 md:mb-16 max-w-3xl mx-auto italic leading-relaxed">Join the PSI QA global community and eliminate testing bottlenecks forever.</p>
           <a href={DASHBOARD_URL} className="bg-[#00c875] text-slate-900 px-10 md:px-16 py-4 md:py-8 rounded-2xl md:rounded-3xl font-black text-xl md:text-3xl hover:scale-105 transition-all flex items-center gap-4 mx-auto justify-center w-fit shadow-2xl active:scale-95">
             Initialize Platform <ArrowRight size={32} />
           </a>

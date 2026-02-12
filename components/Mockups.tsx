@@ -96,8 +96,8 @@ export const GoogleProductionBento = () => (
           {item.icon}
         </div>
         <div>
-          <h4 className="text-xl font-black text-gray-900 dark:text-white mb-2">{item.title}</h4>
-          <p className="text-gray-500 dark:text-gray-400 text-sm font-medium leading-relaxed">{item.desc}</p>
+          <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">{item.title}</h3>
+          <p className="text-gray-600 dark:text-gray-600 text-sm font-medium leading-relaxed">{item.desc}</p>
         </div>
       </div>
     ))}
@@ -118,8 +118,8 @@ export const CompactVelocityCard = () => (
     <div className="p-8 md:p-10 relative z-10">
       <div className="flex justify-between items-start mb-10 md:mb-12">
         <div className="space-y-1">
-          <p className="text-[10px] font-black text-gray-400 dark:text-white/30 uppercase tracking-[0.3em]">System Performance</p>
-          <h4 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white tracking-tight">Audit Throughput</h4>
+          <p className="text-[10px] font-black text-gray-600 dark:text-white/30 uppercase tracking-[0.3em]">System Performance</p>
+          <h3 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white tracking-tight">Audit Throughput</h3>
         </div>
         <div className="flex flex-col items-end">
           <div className="px-4 py-1.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-500 rounded-full font-black text-[9px] md:text-[10px] uppercase tracking-widest shadow-[0_0_20px_rgba(16,185,129,0.2)] animate-pulse flex items-center gap-2">
@@ -167,7 +167,7 @@ export const CompactVelocityCard = () => (
           <Timer size={24} />
         </div>
         <div>
-          <p className="text-[10px] font-black text-gray-400 dark:text-white/30 uppercase tracking-widest mb-1">Cycle Duration</p>
+          <p className="text-[10px] font-black text-gray-600 dark:text-white/30 uppercase tracking-widest mb-1">Cycle Duration</p>
           <div className="flex items-baseline gap-2">
             <span className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white">14m</span>
             <span className="text-sm font-bold text-emerald-500">(-82%)</span>
@@ -180,7 +180,7 @@ export const CompactVelocityCard = () => (
           <UserCheck size={24} />
         </div>
         <div>
-          <p className="text-[10px] font-black text-gray-400 dark:text-white/30 uppercase tracking-widest mb-1">Human Effort</p>
+          <p className="text-[10px] font-black text-gray-600 dark:text-white/30 uppercase tracking-widest mb-1">Human Effort</p>
           <div className="flex items-baseline gap-2">
             <span className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white">Zero</span>
             <span className="text-sm font-bold text-indigo-500">Verified</span>
@@ -196,7 +196,7 @@ export const StrategyGlassDashboard = () => (
     <div className="bg-white/80 dark:bg-[#1A1C24] backdrop-blur-2xl border border-gray-200 dark:border-white/10 p-10 rounded-[3rem] shadow-2xl text-gray-900 dark:text-white overflow-hidden text-left">
       <div className="flex justify-between items-start mb-10">
         <div>
-          <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 dark:text-white/40 mb-2">Executive Summary</h4>
+          <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600 dark:text-white/40 mb-2">Executive Summary</h3>
           <p className="text-2xl md:text-3xl font-black tracking-tight">Audit Protocol v4.2</p>
         </div>
         <div className="flex gap-2.5">
@@ -209,7 +209,7 @@ export const StrategyGlassDashboard = () => (
       <div className="grid grid-cols-2 gap-8 mb-10">
         <div className="bg-gray-50 dark:bg-white/5 rounded-3xl p-7 border border-gray-100 dark:border-white/5 shadow-inner">
           <div className="flex justify-between items-center mb-5">
-            <span className="text-[10px] font-black text-gray-400 dark:text-white/40 uppercase tracking-widest">Readiness</span>
+            <span className="text-[10px] font-black text-gray-600 dark:text-white/40 uppercase tracking-widest">Readiness</span>
             <CheckCircle2 size={16} className="text-[#00c875]" />
           </div>
           <div className="text-4xl md:text-5xl font-black mb-3 tracking-tighter">98.4%</div>
@@ -219,7 +219,7 @@ export const StrategyGlassDashboard = () => (
         </div>
         <div className="bg-gray-50 dark:bg-white/5 rounded-3xl p-7 border border-gray-100 dark:border-white/5 shadow-inner">
           <div className="flex justify-between items-center mb-5">
-            <span className="text-[10px] font-black text-gray-400 dark:text-white/40 uppercase tracking-widest">Parity</span>
+            <span className="text-[10px] font-black text-gray-600 dark:text-white/40 uppercase tracking-widest">Parity</span>
             <ShieldCheck size={16} className="text-[#6161ff]" />
           </div>
           <div className="text-4xl md:text-5xl font-black mb-3 tracking-tighter">100%</div>
@@ -248,8 +248,8 @@ export const CodePipelineVisual = () => (
           {node.icon}
         </div>
         <div className="text-center">
-          <h5 className="text-xl font-black text-gray-900 dark:text-white mb-1">{node.name}</h5>
-          <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">{node.desc}</p>
+          <h3 className="text-xl font-black text-gray-900 dark:text-white mb-1">{node.name}</h3>
+          <p className="text-[10px] font-bold text-gray-600 uppercase tracking-wider">{node.desc}</p>
         </div>
       </div>
     ))}
@@ -260,8 +260,8 @@ export const DeploymentOptimizationVisual = () => (
   <div className="relative w-full bg-white dark:bg-[#1A1C24] rounded-[2.5rem] border border-gray-200 dark:border-white/5 p-8 md:p-10 overflow-hidden shadow-2xl">
     <div className="flex justify-between items-end mb-10 md:mb-12">
       <div>
-        <h4 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white tracking-tight">Deployment</h4>
-        <p className="text-[10px] font-black text-gray-400 dark:text-white/30 uppercase tracking-[0.3em] mt-2">Efficiency</p>
+        <h3 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white tracking-tight">Deployment</h3>
+        <p className="text-[10px] font-black text-gray-600 dark:text-white/30 uppercase tracking-[0.3em] mt-2">Efficiency</p>
       </div>
       <div className="text-right">
         <span className="text-3xl md:text-4xl font-black text-emerald-500 tracking-tighter">-82%</span>
@@ -269,7 +269,7 @@ export const DeploymentOptimizationVisual = () => (
     </div>
     <div className="space-y-8">
       <div className="space-y-3">
-        <div className="flex justify-between text-[9px] font-black uppercase text-gray-400 tracking-widest">
+        <div className="flex justify-between text-[9px] font-black uppercase text-gray-600 tracking-widest">
           <span>Manual Legacy</span>
           <span>48 Hours</span>
         </div>
@@ -293,7 +293,7 @@ export const DeploymentOptimizationVisual = () => (
 export const FooterLogoStrip = () => (
   <div className="w-full py-12 md:py-16 border-b border-gray-100 dark:border-white/5 bg-gray-50/50 dark:bg-[#0B0C14] backdrop-blur-sm">
     <div className="max-w-7xl mx-auto px-8">
-      <p className="text-center text-[10px] uppercase font-black tracking-[0.6em] text-gray-400 dark:text-white/20 mb-10 md:mb-14">Seamlessly Integrated With</p>
+      <p className="text-center text-[10px] uppercase font-black tracking-[0.6em] text-gray-600 dark:text-white/20 mb-10 md:mb-14">Seamlessly Integrated With</p>
       <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 hover:opacity-100 transition-opacity duration-500">
         {[
           { name: "Jira", icon: Layout, color: "text-[#0052CC]" },
@@ -319,7 +319,7 @@ export const ROIImpactStrip = () => (
   <div id="impact" className="w-full py-16 md:py-28 bg-white dark:bg-[#1A1C24] border border-gray-200 dark:border-white/5 rounded-[3rem] md:rounded-[4rem] relative shadow-xl overflow-hidden text-center">
     <div className="mb-16">
       <h3 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tighter mb-4">Proven Impact at Scale</h3>
-      <p className="text-slate-500 dark:text-gray-400 text-lg font-medium italic">Real-world performance metrics from our global audit network.</p>
+      <p className="text-slate-500 dark:text-gray-600 text-lg font-medium italic">Real-world performance metrics from our global audit network.</p>
     </div>
     <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
       {[
@@ -331,7 +331,7 @@ export const ROIImpactStrip = () => (
         <div key={i} className="break-words">
           <p className={`text-5xl md:text-7xl font-black mb-2 ${stat.color} tracking-tighter`}>{stat.val}</p>
           <p className="text-[12px] font-black uppercase tracking-[0.2em] text-slate-900 dark:text-white mb-1">{stat.label}</p>
-          <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{stat.sub}</p>
+          <p className="text-[10px] font-bold text-gray-600 uppercase tracking-widest">{stat.sub}</p>
         </div>
       ))}
     </div>
@@ -345,7 +345,7 @@ export const DetailedTicketTable = () => (
         <div className="w-2 h-14 bg-[#6161ff] rounded-full" />
         <div>
           <h3 className="text-2xl md:text-3xl font-black text-gray-900 dark:text-white tracking-tight">Detailed Audit Log</h3>
-          <p className="text-[10px] font-black text-gray-400 dark:text-white/20 uppercase tracking-[0.3em] mt-2">Verification Suite</p>
+          <p className="text-[10px] font-black text-gray-600 dark:text-white/20 uppercase tracking-[0.3em] mt-2">Verification Suite</p>
         </div>
       </div>
       <div className="px-6 py-3 bg-[#6161ff]/10 rounded-2xl text-[10px] font-black uppercase text-[#6161ff] tracking-[0.2em] border border-[#6161ff]/20">
@@ -355,7 +355,7 @@ export const DetailedTicketTable = () => (
     <div className="overflow-x-auto">
       <table className="w-full">
         <thead>
-          <tr className="bg-gray-50 dark:bg-white/5 text-[9px] font-black text-gray-400 dark:text-white/30 uppercase tracking-[0.3em] border-b border-gray-100 dark:border-white/5">
+          <tr className="bg-gray-50 dark:bg-white/5 text-[9px] font-black text-gray-600 dark:text-white/30 uppercase tracking-[0.3em] border-b border-gray-100 dark:border-white/5">
             <th className="px-8 md:px-12 py-6 text-left whitespace-nowrap">Target</th>
             <th className="px-6 md:px-8 py-6 text-left whitespace-nowrap">Result</th>
             <th className="px-10 md:px-12 py-6 text-right whitespace-nowrap">Timestamp</th>
@@ -370,7 +370,7 @@ export const DetailedTicketTable = () => (
             <tr key={i} className="hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group">
               <td className="px-8 md:px-12 py-7 font-black text-gray-700 dark:text-white/70 group-hover:text-[#6161ff] text-sm md:text-base">{row.target}</td>
               <td className={`px-6 md:px-8 py-7 font-black uppercase text-[10px] tracking-widest ${row.color}`}>{row.result}</td>
-              <td className="px-8 md:px-12 py-7 text-right font-black text-[10px] text-gray-400 dark:text-white/20">{row.time}</td>
+              <td className="px-8 md:px-12 py-7 text-right font-black text-[10px] text-gray-600 dark:text-white/20">{row.time}</td>
             </tr>
           ))}
         </tbody>
@@ -410,7 +410,7 @@ export const FloatingKanban3D = () => (
       ].map((col) => (
         <div key={col.title} className="bg-white/5 backdrop-blur-xl border border-white/10 p-6 rounded-[2rem] shadow-2xl flex flex-col gap-8">
           <div className="flex justify-between items-center mb-2">
-            <h5 className="text-[10px] font-black uppercase tracking-widest text-gray-400 dark:text-white/40">{col.title}</h5>
+            <h3 className="text-[10px] font-black uppercase tracking-widest text-gray-600 dark:text-white/40">{col.title}</h3>
             <div className={`w-2 h-2 rounded-full ${col.color}`} />
           </div>
           {col.cards.map((card) => (

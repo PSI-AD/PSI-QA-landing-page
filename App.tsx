@@ -36,7 +36,7 @@ const App: React.FC = () => {
             <X size={24} />
           </button>
         </div>
-        <div className="text-gray-600 dark:text-gray-400 font-medium leading-relaxed max-h-[60vh] overflow-y-auto custom-scrollbar pr-4">
+        <div className="text-gray-600 dark:text-gray-600 font-medium leading-relaxed max-h-[60vh] overflow-y-auto custom-scrollbar pr-4">
           <p className="mb-4">{content}</p>
           <p>Last Updated: October 2024. PSI QA is committed to maintaining the highest standards of data integrity and operational security.</p>
         </div>
@@ -75,7 +75,7 @@ const App: React.FC = () => {
                 <span className={`text-2xl font-black tracking-tighter leading-none ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                   PSI <span className={activeView === 'projects' ? 'text-[#6161ff]' : 'text-[#00c875]'}>QA</span>
                 </span>
-                <span className="text-[9px] font-black uppercase tracking-[0.3em] text-gray-400 mt-1">Ecosystem</span>
+                <span className="text-[9px] font-black uppercase tracking-[0.3em] text-gray-600 mt-1">Ecosystem</span>
               </div>
             </div>
 
@@ -85,8 +85,9 @@ const App: React.FC = () => {
                 onClick={() => setActiveView('projects')}
                 className={`flex-1 md:flex-none flex items-center justify-center gap-3 px-6 md:px-8 py-3 rounded-2xl transition-all duration-300 font-black text-[10px] md:text-xs uppercase tracking-widest whitespace-nowrap ${activeView === 'projects'
                   ? (darkMode ? 'bg-white/10 text-white shadow-xl border border-white/10' : 'bg-white text-[#6161ff] shadow-xl border border-transparent')
-                  : 'text-gray-400 hover:text-[#6161ff]'
+                  : 'text-gray-600 hover:text-[#6161ff]'
                   }`}
+                aria-label="Strategy View"
               >
                 <BarChart3 size={14} />
                 <span className="hidden md:inline">Strategy</span>
@@ -95,8 +96,9 @@ const App: React.FC = () => {
                 onClick={() => setActiveView('product')}
                 className={`flex-1 md:flex-none flex items-center justify-center gap-3 px-6 md:px-8 py-3 rounded-2xl transition-all duration-300 font-black text-[10px] md:text-xs uppercase tracking-widest whitespace-nowrap ${activeView === 'product'
                   ? (darkMode ? 'bg-white/10 text-white shadow-xl border border-white/10' : 'bg-white text-[#00c875] shadow-xl border border-transparent')
-                  : 'text-gray-400 hover:text-[#00c875]'
+                  : 'text-gray-600 hover:text-[#00c875]'
                   }`}
+                aria-label="Execution View"
               >
                 <PlayCircle size={14} />
                 <span className="hidden md:inline">Execution</span>
@@ -107,7 +109,8 @@ const App: React.FC = () => {
             <div className="flex items-center gap-4">
               <button
                 onClick={() => setDarkMode(!darkMode)}
-                className={`p-3 rounded-2xl transition-all group ${darkMode ? 'text-yellow-400 hover:bg-white/10' : 'text-gray-400 hover:bg-gray-100'}`}
+                aria-label="Toggle Dark Mode"
+                className={`p-3 rounded-2xl transition-all group ${darkMode ? 'text-yellow-400 hover:bg-white/10' : 'text-gray-600 hover:bg-gray-100'}`}
               >
                 {darkMode ? <Sun size={20} /> : <Moon size={20} />}
               </button>
@@ -142,7 +145,7 @@ const App: React.FC = () => {
                   }`}>QA</div>
                 <span className="text-3xl font-black tracking-tighter">PSI QA</span>
               </div>
-              <p className={`text-sm font-medium max-w-sm leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+              <p className={`text-sm font-medium max-w-sm leading-relaxed ${darkMode ? 'text-gray-600' : 'text-gray-600'}`}>
                 Automated high-precision regression for global enterprise audit operations.
               </p>
               <div className="flex gap-4 mt-4">
@@ -156,7 +159,7 @@ const App: React.FC = () => {
               <div className="flex flex-col gap-5">
                 <p className="text-[11px] font-black uppercase tracking-widest text-[#6161ff] mb-2">Platform</p>
                 {['Strategy Hub', 'Execution Engine', 'Audit Logs', 'ROI Analysis'].map(item => (
-                  <a key={item} href="#" className={`text-sm font-bold transition-all hover:translate-x-1 ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-[#6161ff]'
+                  <a key={item} href="#" className={`text-sm font-bold transition-all hover:translate-x-1 ${darkMode ? 'text-gray-600 hover:text-white' : 'text-gray-600 hover:text-[#6161ff]'
                     }`}>
                     {item}
                   </a>
@@ -165,12 +168,12 @@ const App: React.FC = () => {
               <div className="flex flex-col gap-5">
                 <p className="text-[11px] font-black uppercase tracking-widest text-[#00c875] mb-2">Enterprise</p>
                 {['Security', 'WCAG Audits', 'Custom SLAs', 'Performance Hub'].map(i => (
-                  <a key={i} className={`text-sm font-bold transition-all hover:translate-x-1 cursor-pointer ${darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-[#00c875]'
+                  <a key={i} className={`text-sm font-bold transition-all hover:translate-x-1 cursor-pointer ${darkMode ? 'text-gray-600 hover:text-white' : 'text-gray-600 hover:text-[#00c875]'
                     }`}>{i}</a>
                 ))}
               </div>
               <div className="col-span-2 md:col-span-1 flex flex-col gap-5">
-                <p className={`text-[11px] font-black uppercase tracking-widest mb-2 ${darkMode ? 'text-white/40' : 'text-gray-400'}`}>Network</p>
+                <p className={`text-[11px] font-black uppercase tracking-widest mb-2 ${darkMode ? 'text-white/40' : 'text-gray-600'}`}>Network</p>
                 <div className={`flex items-center gap-3 text-[10px] font-black px-5 py-3 rounded-2xl border shadow-inner ${darkMode ? 'text-[#00c875] bg-[#00c875]/10 border-[#00c875]/20' : 'text-[#00c875] bg-[#00c875]/5 border-[#00c875]/10'
                   }`}>
                   <div className="w-2 h-2 rounded-full bg-[#00c875] animate-pulse" />
@@ -180,7 +183,7 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          <div className={`max-w-7xl mx-auto py-10 border-t px-8 flex flex-col sm:flex-row justify-between text-[10px] font-black uppercase tracking-widest gap-6 ${darkMode ? 'border-white/5 text-gray-500' : 'border-gray-100 text-gray-400'
+          <div className={`max-w-7xl mx-auto py-10 border-t px-8 flex flex-col sm:flex-row justify-between text-[10px] font-black uppercase tracking-widest gap-6 ${darkMode ? 'border-white/5 text-gray-600' : 'border-gray-100 text-gray-600'
             }`}>
             <div className="flex gap-8 md:gap-12">
               <span>© 2025 PSI QA GLOBAL</span>
@@ -201,6 +204,7 @@ const App: React.FC = () => {
         {/* Back To Top */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="Back to Top"
           className={`fixed bottom-8 right-8 p-4 bg-blue-600 text-white rounded-full shadow-2xl transition-all duration-500 z-50 hover:bg-blue-700 hover:scale-110 ${showBackToTop ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
         >
           <ArrowUp size={24} />
