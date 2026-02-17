@@ -1,6 +1,4 @@
-
 import React, { useEffect, useState } from 'react';
-// Replace missing ManagerDashboardHighDensity with DetailedTicketTable
 import { StrategyGlassDashboard, DetailedTicketTable } from './Mockups';
 import ScrollReveal from './ScrollReveal';
 import {
@@ -47,14 +45,14 @@ const StrategyView: React.FC = () => {
                 Bring your QA <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6161ff] via-indigo-300 to-[#6161ff] animate-pulse">strategy to life.</span>
               </h2>
-              <p className="text-xl md:text-2xl text-gray-600 mb-14 max-w-2xl leading-relaxed font-medium italic">
+              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-14 max-w-2xl leading-relaxed font-medium italic">
                 Manage your QA audit lists, track team capacity, and visual project health in one place.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-8">
                 <a href={DASHBOARD_URL} className="bg-[#6161ff] text-white px-12 py-5 rounded-2xl font-black text-lg hover:brightness-110 transition-all shadow-2xl shadow-[#6161ff]/40 flex items-center gap-3 active:scale-95 group">
                   Initiate Global Audit <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </a>
-                <div className="flex items-center gap-4 text-white/30">
+                <div className="flex items-center gap-4 text-gray-500 dark:text-gray-400">
                   <div className="h-px w-10 bg-white/20" />
                   <span className="text-[10px] font-black uppercase tracking-[0.3em]">v4.2-STABLE</span>
                 </div>
@@ -73,7 +71,7 @@ const StrategyView: React.FC = () => {
       <section className="py-24 bg-slate-50 border-y border-gray-100 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-center text-[10px] font-black uppercase tracking-[0.5em] text-gray-600 mb-12 italic">Ecosystem Authorization Active</p>
+          <p className="text-center text-[10px] font-black uppercase tracking-[0.5em] text-gray-600 dark:text-gray-400 mb-12 italic">Ecosystem Authorization Active</p>
           <div className="flex flex-wrap justify-center items-center gap-x-20 gap-y-12 px-10 grayscale opacity-30 hover:opacity-50 transition-opacity">
             <div className="flex items-center gap-3"><Activity size={24} className="text-[#0052CC]" /><span className="font-black text-xl tracking-tighter">Jira</span></div>
             <div className="flex items-center gap-3"><Globe size={24} className="text-[#E01E5A]" /><span className="font-black text-xl tracking-tighter">Slack</span></div>
@@ -113,7 +111,7 @@ const StrategyView: React.FC = () => {
                   {item.icon}
                 </div>
                 <h3 className="text-3xl font-black mb-6 leading-tight text-[#181b34]">{item.title}</h3>
-                <p className="text-gray-600 font-medium leading-relaxed text-lg">{item.desc}</p>
+                <p className="text-gray-600 dark:text-gray-400 font-medium leading-relaxed text-lg">{item.desc}</p>
               </ScrollReveal>
             ))}
           </div>
@@ -127,13 +125,12 @@ const StrategyView: React.FC = () => {
           <div className="text-center mb-24 max-w-3xl mx-auto">
             <ScrollReveal>
               <h2 className="text-5xl md:text-6xl font-black tracking-tight mb-8">Unified Management Control.</h2>
-              <p className="text-xl text-gray-600 font-medium italic">Monitor team workload and regression risk heatmaps across your global infrastructure in one pane of glass.</p>
+              <p className="text-xl text-gray-600 dark:text-gray-400 font-medium italic">Monitor team workload and regression risk heatmaps across your global infrastructure in one pane of glass.</p>
             </ScrollReveal>
           </div>
           <ScrollReveal delay={200}>
             <div className="relative">
               <div className="absolute -inset-10 bg-gradient-to-tr from-[#6161ff]/10 to-transparent blur-[80px] opacity-40 -z-10" />
-              {/* Fix: ManagerDashboardHighDensity was missing, replacing with DetailedTicketTable */}
               <DetailedTicketTable />
             </div>
           </ScrollReveal>
@@ -152,7 +149,7 @@ const StrategyView: React.FC = () => {
             ].map((stat, i) => (
               <ScrollReveal key={i} delay={i * 100}>
                 <p className={`text-6xl font-black mb-3 ${stat.color} tracking-tighter`}>{stat.val}</p>
-                <p className="text-[10px] font-black uppercase tracking-[0.5em] text-white/30">{stat.label}</p>
+                <p className="text-[10px] font-black uppercase tracking-[0.5em] text-gray-500 dark:text-gray-400">{stat.label}</p>
               </ScrollReveal>
             ))}
           </div>
