@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   DetailedTicketTable,
@@ -32,7 +31,7 @@ const ProjectsTasksView: React.FC = () => {
                 Ship Faster with <br />
                 <span className="text-[#6161ff]">Extreme Precision.</span>
               </h1>
-              <p className="text-base md:text-xl text-gray-600 dark:text-gray-600 mb-10 md:mb-12 max-w-xl font-medium leading-relaxed italic">
+              <p className="text-base md:text-xl text-gray-600 dark:text-gray-400 mb-10 md:mb-12 max-w-xl font-medium leading-relaxed italic">
                 The specialized high-precision ecosystem for automated regression and enterprise audit operations.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-6 md:gap-8">
@@ -60,7 +59,7 @@ const ProjectsTasksView: React.FC = () => {
           <div className="mb-16 md:mb-24 text-left">
             <ScrollReveal>
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-6 leading-tight text-gray-900 dark:text-white">Zero-Bug Release <br />Architecture.</h2>
-              <p className="text-gray-600 dark:text-gray-600 font-medium text-lg md:text-xl italic max-w-xl">Enterprise-grade tooling designed for highest-precision operations.</p>
+              <p className="text-gray-600 dark:text-gray-400 font-medium text-lg md:text-xl italic max-w-xl">Enterprise-grade tooling designed for highest-precision operations.</p>
             </ScrollReveal>
           </div>
           <FeatureBentoGrid />
@@ -73,7 +72,7 @@ const ProjectsTasksView: React.FC = () => {
           <div className="mb-16 md:mb-24 text-center">
             <ScrollReveal>
               <h2 className="text-3xl md:text-6xl font-black tracking-tighter mb-8 leading-tight text-gray-900 dark:text-white">Powered by Google.</h2>
-              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-600 font-medium italic max-w-2xl mx-auto">Full-stack infrastructure and intelligence for global-scale reliability.</p>
+              <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-medium italic max-w-2xl mx-auto">Full-stack infrastructure and intelligence for global-scale reliability.</p>
             </ScrollReveal>
           </div>
           <GoogleProductionBento />
@@ -90,7 +89,7 @@ const ProjectsTasksView: React.FC = () => {
             <div className="text-left">
               <ScrollReveal>
                 <h3 className="text-2xl md:text-4xl font-black mb-6 md:mb-8 tracking-tighter text-gray-900 dark:text-white">Zero-Touch Verification.</h3>
-                <p className="text-gray-600 dark:text-gray-600 text-base md:text-lg font-medium mb-10 md:mb-12 italic leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-400 text-base md:text-lg font-medium mb-10 md:mb-12 italic leading-relaxed">
                   Parallelized serverless nodes ensure massive coverage with zero human intervention required.
                 </p>
                 <div className="space-y-6">
@@ -120,7 +119,7 @@ const ProjectsTasksView: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-6xl font-black tracking-tighter mb-8 leading-tight text-gray-900 dark:text-white">Built on Modern Standards.</h2>
-            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-600 font-medium italic max-w-3xl mx-auto">Engineered for modularity, type-safety, and enterprise performance.</p>
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-medium italic max-w-3xl mx-auto">Engineered for modularity, type-safety, and enterprise performance.</p>
           </ScrollReveal>
           <ScrollReveal delay={300}>
             <CodePipelineVisual />
@@ -133,7 +132,7 @@ const ProjectsTasksView: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <ScrollReveal className="text-center mb-16 md:mb-24">
             <h2 className="text-3xl md:text-6xl font-black text-gray-900 dark:text-white tracking-tighter mb-8">Verification Ledger.</h2>
-            <p className="text-gray-600 dark:text-gray-600 text-lg md:text-xl font-medium italic">Immutable history of every audit execution cycle.</p>
+            <p className="text-gray-600 dark:text-gray-400 text-lg md:text-xl font-medium italic">Immutable history of every audit execution cycle.</p>
           </ScrollReveal>
           <DetailedTicketTable />
         </div>
